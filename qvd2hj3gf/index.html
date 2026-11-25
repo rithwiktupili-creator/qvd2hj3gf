@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FINORA | Events, Beautifully Planned</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- LOGIN / REGISTER -->
+  <section id="loginPage" class="login-page">
+    <div class="login-visual">
+      <a class="login-brand" href="#">FINORA<span>.</span></a>
+      <div class="login-message">
+        <p class="eyebrow">THE ART OF CELEBRATION</p>
+        <h1>Every moment<br>deserves to be<br><em>extraordinary.</em></h1>
+        <p>From intimate gatherings to grand celebrations, bring your vision to life with FINORA.</p>
+      </div>
+      <p class="login-bottom">CREATE MOMENTS. MAKE MEMORIES.</p>
+    </div>
+
+    <div class="login-form-area">
+      <div class="login-form">
+        <p class="eyebrow">WELCOME TO FINORA</p>
+        <h2 id="authTitle">Welcome back.</h2>
+        <p class="muted" id="authSubtitle">Sign in to start planning something beautiful.</p>
+
+        <form id="loginForm">
+          <div id="nameField" class="hidden">
+            <label for="userName">Full name</label>
+            <input type="text" id="userName" placeholder="Enter your name">
+          </div>
+
+          <label for="email">Email address</label>
+          <input type="email" id="email" placeholder="you@example.com" required>
+
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter password" required>
+
+          <button type="submit" class="primary-btn" id="authButton">Sign In <span>→</span></button>
+        </form>
+
+        <p class="auth-switch" id="authSwitch">
+          New to FINORA? <a href="#" id="switchAuth">Create an account</a>
+        </p>
+        <p class="auth-note">Your celebrations begin here.</p>
+        <p class="auth-demo">Demo project · Use Register to create an account</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN APPLICATION -->
+  <main id="mainApp" class="hidden">
+
+    <header class="navbar">
+      <a href="#home" class="logo">FINORA<span>.</span></a>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#events">Explore Events</a>
+        <a href="#planner">Plan Event</a>
+        <a href="#dashboard">Dashboard</a>
+      </nav>
+      <div class="nav-right">
+        <span id="welcomeUser">Welcome!</span>
+        <button class="logout-btn" id="logoutBtn">Logout</button>
+      </div>
+    </header>
+
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">CELEBRATE WITHOUT LIMITS</p>
+        <h1>Your vision.<br>Our <em>planning.</em><br>Perfect memories.</h1>
+        <p>Discover venues, choose your vendors and plan every detail — all in one place.</p>
+        <a href="#events" class="hero-btn">Explore celebrations <span>↗</span></a>
+      </div>
+      <div class="hero-image">
+        <div class="image-caption">
+          <span>01 / YOUR STORY STARTS HERE</span>
+          <strong>Moments worth remembering.</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- EVENT CATEGORIES -->
+    <section class="intro-section" id="events">
+      <div>
+        <p class="eyebrow">FIND YOUR OCCASION</p>
+        <h2>What are we <em>celebrating?</em></h2>
+      </div>
+      <p class="section-description">Choose your celebration. We'll help you bring every detail together.</p>
+    </section>
+
+    <section class="event-grid">
+      <button class="event-card wedding" data-event="Wedding">
+        <span>01</span><div><h3>Weddings</h3><p>Make forever unforgettable</p></div>
+      </button>
+      <button class="event-card birthday" data-event="Birthday">
+        <span>02</span><div><h3>Birthdays</h3><p>Celebrate another beautiful year</p></div>
+      </button>
+      <button class="event-card baby" data-event="Baby Shower">
+        <span>03</span><div><h3>Baby Showers</h3><p>A little one, a lot of love</p></div>
+      </button>
+      <button class="event-card fest" data-event="College Fest">
+        <span>04</span><div><h3>College Fests</h3><p>Make the campus come alive</p></div>
+      </button>
+      <button class="event-card corporate" data-event="Corporate Event">
+        <span>05</span><div><h3>Corporate Events</h3><p>Professional, polished, perfect</p></div>
+      </button>
+      <button class="event-card engagement" data-event="Engagement">
+        <span>06</span><div><h3>Engagements</h3><p>The beginning of forever</p></div>
+      </button>
+      <button class="event-card reception" data-event="Reception">
+        <span>07</span><div><h3>Receptions</h3><p>An evening to remember</p></div>
+      </button>
+      <button class="event-card anniversary" data-event="Anniversary">
+        <span>08</span><div><h3>Anniversaries</h3><p>Celebrate your journey</p></div>
+      </button>
+      <button class="event-card housewarming" data-event="Housewarming">
+        <span>09</span><div><h3>Housewarmings</h3><p>New beginnings, warm memories</p></div>
+      </button>
+      <button class="event-card farewell" data-event="Farewell">
+        <span>10</span><div><h3>Farewell</h3><p>One last beautiful memory</p></div>
+      </button>
+      <button class="event-card naming" data-event="Naming Ceremony">
+        <span>11</span><div><h3>Naming Ceremony</h3><p>A beautiful new beginning</p></div>
+      </button>
+      <button class="event-card other" data-event="Other Event">
+        <span>12</span><div><h3>Other Events</h3><p>Your celebration, your way</p></div>
+      </button>
+    </section>
+
+    <!-- EVENT PLANNER -->
+    <section class="planner-section" id="planner">
+      <div class="planner-heading">
+        <p class="eyebrow">YOUR EVENT, YOUR WAY</p>
+        <h2>Let's make it <em>happen.</em></h2>
+        <p>Tell us about your event and explore services that fit your budget.</p>
+      </div>
+
+      <div class="planner-layout">
+        <div class="planner-main">
+          <div class="panel">
+            <div class="panel-heading">
+              <span class="step-number">01</span>
+              <div><h3>Event details</h3><p>Start with the essentials.</p></div>
+            </div>
+
+            <div class="form-grid">
+              <div class="field">
+                <label for="eventType">Event type</label>
+                <select id="eventType">
+                  <option value="">Select event</option>
+                  <option>Wedding</option>
+                  <option>Birthday</option>
+                  <option>Baby Shower</option>
+                  <option>College Fest</option>
+                  <option>Corporate Event</option>
+                  <option>Engagement</option>
+                  <option>Reception</option>
+                  <option>Anniversary</option>
+                  <option>Housewarming</option>
+                  <option>Farewell</option>
+                  <option>Naming Ceremony</option>
+                  <option>Other Event</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="city">City</label>
+                <select id="city">
+                  <option value="">Choose your city</option>
+                  <option>Hyderabad</option>
+                  <option>Vijayawada</option>
+                  <option>Guntur</option>
+                  <option>Visakhapatnam</option>
+                  <option>Tirupati</option>
+                  <option>Nellore</option>
+                  <option>Rajahmundry</option>
+                  <option>Kurnool</option>
+                  <option>Kadapa</option>
+                  <option>Ongole</option>
+                  <option>Chennai</option>
+                  <option>Bengaluru</option>
+                  <option>Kochi</option>
+                  <option>Thiruvananthapuram</option>
+                  <option>Coimbatore</option>
+                  <option>Mysuru</option>
+                  <option>Mangaluru</option>
+                  <option>Madurai</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="eventDate">Event date</label>
+                <input type="date" id="eventDate">
+              </div>
+
+              <div class="field">
+                <label for="guests">Expected guests</label>
+                <input type="number" id="guests" min="1" placeholder="e.g. 250">
+              </div>
+
+              <div class="field full">
+                <label for="budget">Total event budget (₹)</label>
+                <input type="number" id="budget" min="1" placeholder="Enter your total budget">
+              </div>
+            </div>
+
+            <button class="primary-btn" id="generateBtn">Explore services <span>→</span></button>
+            <p class="form-error" id="formError"></p>
+          </div>
+
+          <div id="servicesArea" class="hidden">
+            <div class="services-heading">
+              <div>
+                <p class="eyebrow">02 / BUILD YOUR CELEBRATION</p>
+                <h3>Choose your services</h3>
+              </div>
+              <span class="service-hint">Select one option in each category</span>
+            </div>
+            <div id="serviceCategories"></div>
+          </div>
+        </div>
+
+        <!-- BUDGET PANEL -->
+        <aside class="budget-panel">
+          <p class="eyebrow">YOUR EVENT OVERVIEW</p>
+          <h3>Budget <em>planner.</em></h3>
+
+          <div class="budget-total">
+            <span>Total budget</span>
+            <strong id="totalBudget">₹0</strong>
+          </div>
+
+          <div class="budget-line">
+            <span>Selected services</span>
+            <strong id="spentBudget">₹0</strong>
+          </div>
+
+          <div class="budget-line remaining">
+            <span>Remaining balance</span>
+            <strong id="remainingBudget">₹0</strong>
+          </div>
+
+          <div class="progress-track"><div id="budgetProgress"></div></div>
+          <p class="budget-caption" id="budgetCaption">Your budget breakdown will appear here.</p>
+
+          <div id="budgetSuggestions" class="suggestion-box hidden"></div>
+
+          <div class="selected-list">
+            <h4>Selected services</h4>
+            <div id="selectedItems"><p class="muted">No services selected yet.</p></div>
+          </div>
+
+          <button class="primary-btn summary-btn" id="summaryBtn">View final plan <span>↗</span></button>
+        </aside>
+      </div>
+    </section>
+
+    <!-- CUSTOMER DASHBOARD -->
+    <section class="dashboard-section" id="dashboard">
+      <div class="planner-heading">
+        <p class="eyebrow">YOUR PERSONAL SPACE</p>
+        <h2>Your planning <em>dashboard.</em></h2>
+        <p>Keep track of your event and saved services.</p>
+      </div>
+
+      <div class="dashboard-grid">
+        <article class="dashboard-card">
+          <div class="dashboard-icon">♡</div>
+          <h3>My Wishlist</h3>
+          <p>Save and review your favourite service choices.</p>
+          <strong id="wishlistCount">0 saved services</strong>
+        </article>
+
+        <article class="dashboard-card">
+          <div class="dashboard-icon">✓</div>
+          <h3>Event Checklist</h3>
+          <p>Track your planning progress.</p>
+          <strong id="checklistCount">0 of 5 completed</strong>
+          <div class="checklist" id="checklist">
+            <label><input type="checkbox"> Select event venue</label>
+            <label><input type="checkbox"> Confirm catering</label>
+            <label><input type="checkbox"> Finalize decoration</label>
+            <label><input type="checkbox"> Arrange photography</label>
+            <label><input type="checkbox"> Review final budget</label>
+          </div>
+        </article>
+
+        <article class="dashboard-card">
+          <div class="dashboard-icon">◷</div>
+          <h3>Event Countdown</h3>
+          <p>Time remaining until your celebration.</p>
+          <strong id="countdown">Choose an event date</strong>
+        </article>
+      </div>
+    </section>
+
+    <!-- FINAL SUMMARY -->
+    <section class="summary-section hidden" id="summarySection">
+      <div class="summary-header">
+        <p class="eyebrow">YOUR CELEBRATION AT A GLANCE</p>
+        <h2>Your event <em>plan.</em></h2>
+      </div>
+      <div id="summaryContent"></div>
+      <button class="primary-btn print-btn" id="printBtn">Print event plan ↗</button>
+    </section>
+
+    <footer>
+      <a href="#home" class="logo">FINORA<span>.</span></a>
+      <p>Thoughtfully planned. Beautifully celebrated.</p>
+      <span>© 2026 FINORA. All rights reserved.</span>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
